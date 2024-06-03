@@ -37,7 +37,7 @@ pipeline {
                 script {
                     def token = "squ_c6367b35989f544290cacb291ed224f515eb9dae"
                     def sonarQubeUrl = "http://13.38.80.145:9000/api"
-                    def componentKey = "com.codeddecode:restaurantlisting"
+                    def componentKey = "com.codedecode:restaurantlisting"
                     def coverageThreshold = 80.0
 
                     def response = sh (
@@ -87,7 +87,7 @@ pipeline {
         '''
           sh 'git checkout master'
           sh 'git add .'
-          sh 'git commit -m "Update image tag"'
+          sh 'git commit -m "Update image tag in restaurant service"'
         sshagent(['git-ssh'])
             {
                   sh('git push')
